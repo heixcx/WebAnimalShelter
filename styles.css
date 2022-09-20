@@ -1,5 +1,36 @@
-.Heading h1, .Heading img {
-        margin-right: 10px;
-        display:inline-block;
-        vertical-align:middle;
+.Heading img {
+    margin-left: 50px;
 }
+.Heading h1, .Heading img { 
+    color: orange;
+    font-size: 250%;        
+    display:inline-block;
+    vertical-align:middle;
+}
+.topnav {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 17px 16px;
+    text-decoration: none;
+    font-size: 28px;
+    width: 14.374%;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
