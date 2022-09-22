@@ -5,17 +5,56 @@
     <title>Loving Heart Animal Shelter</title>  
   </head>
   <body>
+
     <div class="Heading">
-      <img src="pet-care.png" alt="heart" style="width:80px;height:80px;" />
-      <h1 href="#home"> Loving Heart Animal Shelter </h1>
+      <a href="#home"> 
+        <img src="/picture/pet-care.png" alt="heart" style="width:80px;height:80px;"/>
+      </a> 
+      <a id="title" href="#home"> Loving Heart Animal Shelter </a>
     </div>
+
     <div class="topnav">
       <a class="active" href="#home">Home</a>
       <a href="#donate">Donate</a>
       <a href="#adopt">Adopt</a>
       <a href="#event">Event</a>
       <a href="#contact">Contact Us</a>
-      <a href="#search">Search</a>
+      <a id="search" href="#search">Search</a>
     </div>
+
+    <div class="slidescontainer">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="slides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="/picture/cat_donate.jpeg" style="width:100%;"/>
+        <div class="text">Caption Text</div>
+      </div>
+    
+      <div class="slides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="/picture/dog_adopt.jpeg" style="width:100%;"/>
+        <div class="text">Caption Two</div>
+      </div>
+    
+      <div class="slides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="/picture/rabbit_event.jpeg" style="width:100%;"/>
+        <div class="text">Caption Three</div>
+      </div>
+    
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
   </body>
 </html>
