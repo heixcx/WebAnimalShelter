@@ -27,18 +27,24 @@
 
       <!-- Full-width images with number and caption text -->
       <div class="slides fade">
-        <img src="/picture/cat_donate1.jpeg" style="width:100%;"/>
-        <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat odio ut quidem quia omnis culpa totam magnam, pariatur unde animi recusandae repellendus ea est enim tenetur dicta tempore quibusdam distinctio.</p>
+        <img src="/picture/cat_donate.jpeg" style="width:100%;"/>
+        <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat odio ut quidem quia omnis culpa totam magnam, pariatur unde animi recusandae repellendus ea est enim tenetur dicta tempore quibusdam distinctio.<br>
+          <button class="slidebutton">Donate</button>
+        </p>
       </div>
     
       <div class="slides fade">
         <img src="/picture/dog_adopt.jpeg" style="width:100%;"/>
-        <p class="text">Caption Two</p>
+        <p class="text">Caption Two<br>
+          <button class="slidebutton">Adopt</button>
+        </p>
       </div>
     
       <div class="slides fade">
         <img src="/picture/rabbit_event.jpeg" style="width:100%;"/>
-        <p class="text">Caption Three</p>
+        <p class="text">Caption Three<br>
+          <button class="slidebutton">Event</button>
+        </p>
       </div>
     
       <!-- Next and previous buttons -->
@@ -53,7 +59,21 @@
       <span class="dot" onclick="currentSlide(3)"></span>
     </div>
     
-    <script src="logic.js"></script>
+    <div class="aboutus">
+      <h2>About us</h2>
+      <div class="whoweare">
+        <img src="/picture/dog_who.jpg" style="width:35%" />
+        <div>
+          <h3 id="titlewho">Who We Are</h3><br>
+          <p id="textwho"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quasi blanditiis voluptas perferendis, fugit voluptates placeat beatae, sequi modi aperiam laudantium, eligendi ipsum iusto! Unde quae nisi quam fugiat architecto.</p>
+        </div>
+      </div>
+      <div class="whatwedo">
+        <p id="textwhat"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quasi blanditiis voluptas perferendis, fugit voluptates placeat beatae, sequi modi aperiam laudantium, eligendi ipsum iusto! Unde quae nisi quam fugiat architecto.</p>
+        <img src="#cat" style="width:50%" />
+      </div>
+    </div>
+    <script src="pictureslides.js"></script>
 
 
   </body>
