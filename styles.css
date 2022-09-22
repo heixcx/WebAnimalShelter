@@ -1,6 +1,6 @@
 body {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
     background-image: url("/picture/dog_background.jpg");
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
@@ -16,7 +16,6 @@ body {
 
 .topnav {
     margin-top: 10px;
-    margin-bottom: 10px;
     background-color: #d97228;
     border-radius: 15px 15px 0px 0px;
     overflow: hidden;
@@ -25,9 +24,9 @@ body {
   
 .topnav a {
     float: left;
-    color: #333;
+    color: #ddd;
     text-align: center;
-    padding: 16px;
+    padding: 20px 40px;
     text-decoration: none;
     font-size: 20px;
 }
@@ -88,13 +87,14 @@ body {
 
 /* Caption text */
 .text {
-  color: #bbb;
+  color: #fff;
+  background-color: rgba(11, 11, 11, 0.4);
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  top: 40px;
-  left: 70%;
-  width: 100%;
+  top: 30px;
+  left: 65%;
+  right: 5%;
   text-align: left;
 }
 
