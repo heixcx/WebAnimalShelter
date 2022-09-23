@@ -3,7 +3,7 @@ body {
     margin-right: 10%;
     background-image: url("/picture/dog_background.jpg");
     background-size: cover;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Muli';
 }
 
 .Heading a, #title{
@@ -88,17 +88,27 @@ body {
 /* Caption text */
 .text {
   color: #fff;
-  font-size: 15px;
+  background-color: rgba(92, 92, 92, 0.8);
+  font-size: 20px;
   padding: 8px 12px;
   position: absolute;
-  top: 30px;
+  top: 15%;
   left: 65%;
   right: 5%;
-  text-align: left;
+  text-align: center;
+}
+
+.slidebutton {
+  margin-top: 15%;
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px; 
 }
 
 .slidebutton, .text {
-    text-align: center;
+  text-align: center;
 }
 
 /* The dots/bullets/indicators */
@@ -137,6 +147,11 @@ body {
   display: flex;
   align-items: center;
 }
+
+#textwho {
+  font-size: 20px;
+}
+
 #titlewho, #textwho {
   margin-left: 15%;
   margin-right: 15%;
@@ -148,8 +163,20 @@ body {
   align-items: center;
 }
 
+#textwhat {
+  font-size: 20px;
+}
+
 #titlewhat, #textwhat {
   margin-left: 15%;
   margin-right: 15%;
+  text-align: center;
+}
+
+.w3-container {
+  margin-top: 5%;
+  background-color:#d97228;
+  display: flex;
+  align-items: center;
   text-align: center;
 }
