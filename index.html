@@ -2,25 +2,31 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Muli'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>LovingHeart Animal Project</title>  
   </head>
   <body>
 
-    <div class="Heading">
+    <div class="heading">
       <a href="#home"> 
-        <img src="/picture/pet-care.png" alt="heart" style="width:100px;height:100px;"/>
+        <img id="logo" src="/picture/pet-care.png" alt="heart" style="width:100px;height:100px;"/>
       </a> 
-      <a id="title" href="#home"><span style=font-weight:900;>LovingHeart<br><span style=font-size:18px;font-family:Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif>ANIMAL PROJECT</span> </a>
+      <a id="title" href="#home"><span style=font-size:32px;font-weight:900;>LovingHeart<br><span style=font-size:18px;font-family:Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif>ANIMAL PROJECT</span> </a>
+      <div class="login">
+        <a id="linklogin" href="#login">Login</a><span class="divider">|</span>
+        <a href="#signup">Sign Up</a>
+      </div>
     </div>
 
     <div class="topnav">
-      <a class="active" href="#home">Home</a>
+      <a class="active" href="#home"><i class="fa fa-fw fa-home"></i>Home</a>
       <a href="#donate">Donate</a>
       <a href="#adopt">Adopt</a>
       <a href="#event">Event</a>
       <a href="#contact">Contact Us</a>
-      <a id="search" href="#search">Search</a>
+      <a id="search" href="#search" ><i class="fa fa-fw fa-search"></i>Search</a>
+      <input id="searchbar" type="text" class="w3-bar-item w3-input" placeholder="Search..">
     </div>
 
     <div class="slidescontainer">
@@ -79,17 +85,17 @@
 
   
       <div class="w3-container">
-        <div>
+        <div style="width: 33.3%;">
           <h2 id="hours">Hours</h2>
-          <p id="time"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quasi blanditiis voluptas perferendis, fugit voluptates placeat beatae, sequi modi aperiam laudantium, eligendi ipsum iusto! Unde quae nisi quam fugiat architecto.</p>
+          <p id="time">Monday - Friday 10:00AM - 5:00PM<br>Saturday 11:00AM - 3:00PM<br>Sunday Closed</p>
         </div>
-        <div>
+        <div style="width: 33.3%;">
           <h2 id="social">Connect With Us</h2>
           <p id="mediaicon"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quasi blanditiis voluptas perferendis, fugit voluptates placeat beatae, sequi modi aperiam laudantium, eligendi ipsum iusto! Unde quae nisi quam fugiat architecto.</p>
         </div>
-        <div>
+        <div style="width: 33.3%;">
           <h2 id="location">Location</h2>
-          <p id="address"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quasi blanditiis voluptas perferendis, fugit voluptates placeat beatae, sequi modi aperiam laudantium, eligendi ipsum iusto! Unde quae nisi quam fugiat architecto.</p>
+          <p id="text"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quasi blanditiis voluptas perferendis, fugit voluptates placeat beatae, sequi modi aperiam laudantium, eligendi ipsum iusto! Unde quae nisi quam fugiat architecto.</p>
         </div>
       </div>
     
