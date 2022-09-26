@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Muli'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
     <title>LovingHeart Animal Project</title>  
   </head>
   <body>
@@ -32,7 +34,6 @@
     </div>
 
     <div class="slidescontainer">
-
       <!-- Full-width images with number and caption text-->
      <div class="slides fade">
         <img src="/picture/cat_donate.jpeg" style="width:100%;"/>
@@ -40,21 +41,18 @@
           <button class="slidebutton" onclick="window.location.href='#donate';">Donate</button>
         </p>
       </div>
-    
       <div class="slides fade">
         <img src="/picture/dog_adopt.jpeg" style="width:100%;"/>
         <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero corrupti error maiores ullam corporis asperiores cum, sint doloribus ea unde omnis ipsa atque a esse similique ipsam. Expedita, cum ea!<br>
           <button class="slidebutton" onclick="window.location.href='#adopt';">Adopt</button>
         </p>
-      </div>
-    
+      </div>   
       <div class="slides fade">
         <img src="/picture/rabbit_event1.jpeg" style="width:100%;"/>
         <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti cumque, aliquid et harum velit excepturi veniam? Fuga saepe commodi perspiciatis nihil, ipsa illo! Nam ratione impedit dolores recusandae commodi nemo!<br>
           <button class="slidebutton" onclick="window.location.href='#event';">Event</button>
         </p>
       </div>
-    
       <!--Next and previous buttons -->
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -72,13 +70,13 @@
       <div class="whoweare">
         <img src="/picture/dog_staff.jpg" style="width:50%;" />
         <div>
-          <h2 id="titlewho">Who We Are</h2>
+          <h3 id="titlewho">Who We Are</h3>
           <p id="textwho"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quasi blanditiis voluptas perferendis, fugit voluptates placeat beatae, sequi modi aperiam laudantium, eligendi ipsum iusto! Unde quae nisi quam fugiat architecto.</p>
         </div>
       </div>
       <div class="whatwedo">
         <div>
-          <h2 id="titlewhat">What We Do</h2>
+          <h3 id="titlewhat">What We Do</h3>
           <p id="textwhat"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quasi blanditiis voluptas perferendis, fugit voluptates placeat beatae, sequi modi aperiam laudantium, eligendi ipsum iusto! Unde quae nisi quam fugiat architecto.</p>
         </div>
         <img src="/picture/shelter-design.jpeg" style="width:50%" />
@@ -86,24 +84,51 @@
     </div>
 
   
-      <div class="w3-container">
-        <div style="width: 33.3%;">
-          <h2 id="hours">Hours</h2>
-          <p id="time">Monday - Friday 10:00AM - 5:00PM<br>Saturday 11:00AM - 3:00PM<br>Sunday Closed</p>
-        </div>
-        <div style="width: 33.3%;">
-          <h2 id="social">Connect With Us</h2>       
-          <a href="#twitter" class="fa fa-twitter"></a>
-          <a href="#facebook" class="fa fa-facebook"></a>
-          <a href="#ins" class="fa fa-instagram"></a>
-        </div>
-        <div style="width: 33.3%;">
-          <h2 id="location">Location</h2>
-          <p id="text"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quasi blanditiis voluptas perferendis, fugit voluptates placeat beatae, sequi modi aperiam laudantium, eligendi ipsum iusto! Unde quae nisi quam fugiat architecto.</p>
-        </div>
+    <div class="w3-container">
+      <div style="width: 33.3%;">
+        <h2 id="hours">Hours</h2>
+        <p id="time">Monday - Friday 10:00AM - 5:00PM<br>Saturday 11:00AM - 3:00PM<br>Sunday Closed</p>
       </div>
+      <div style="width: 33.3%;">
+        <h2 id="social">Connect With Us</h2>       
+        <a href="#twitter" class="fa fa-twitter"></a>
+        <a href="#facebook" class="fa fa-facebook"></a>
+        <a href="#ins" class="fa fa-instagram"></a>
+      </div>
+      <div style="width: 33.3%;">
+        <h2 id="location">Location</h2>
+        <p id="text">785 Spruce Dr<br> Greenwood, IN 46143</p>
+      </div>
+    </div>
+
     
-      <script src="pictureslides.js"></script>
+    <div id="chatbody"> 
+      <div id="chat-circle" class="btn btn-raised">
+        <div id="chat-overlay"></div>
+        <i class="fa fa-comment fa-2x"></i>
+      </div>
+      
+      <div class="chat-box">
+        <div class="chat-box-header">Live Support<span class="chat-box-toggle"><i class="fa fa-close fa-2x"></i></span></div>
+        <div class="chat-box-body">
+          <div class="chat-box-overlay"></div>
+          <div class="chat-logs"></div>
+          <!--chat-log -->
+        </div>
+        <div class="chat-input">      
+          <form>
+            <input type="text" id="chat-input" placeholder="Send a message..."/>
+          <button type="submit" class="chat-submit" id="chat-submit"><i class="fa fa-paper-plane"></i></button>
+          </form>      
+        </div>
+      </div>  
+    </div>
+
+    <div class="copyright">© 2022 LovingHeart Animal Project. All rights reserved.</div>
+
+    <script src="pictureslides.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="livechat.js"></script>
 
 
   </body>
