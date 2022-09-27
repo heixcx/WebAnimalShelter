@@ -33,6 +33,11 @@ body {
   color: black;
 }
 
+.login a.active {
+  background-color: #e6b82f;
+  color: white;
+}
+
 .topnav {
   margin-top: 10px;
   background-color: #d97228;
@@ -92,6 +97,7 @@ body {
 /* Hide the images by default */
 .slides {
   display: none;
+  text-align: center;
 }
 
 /* Next & previous buttons */
@@ -320,7 +326,7 @@ figure {
   padding: 0px;
   border: 3px solid #fff;
   box-shadow: 0px 0px 3px #ccc;
-  z-index: -1;
+  z-index: 0;
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -347,6 +353,58 @@ figcaption {
     grid-template-columns: 1fr;
     width: 90vw;
   }
+}
+
+.ollie {
+  text-align: center;
+  margin-bottom: 50px;
+  
+}
+.animaldetails table {
+  width:40%;
+  border-collapse: collapse;
+  margin-left: 10%;
+  background-color: #fbf9f9;
+}
+
+.animaldetails td {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+.animaldetails tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.details {
+  width: 30%;
+  margin-left: 5%;
+  text-align: left;
+}
+
+.animaldetails {
+  margin-top: 30px;
+  font-size: 20px;
+  display: flex;
+  overflow:auto;
+}
+
+.applybutton button{
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 20px 40px;
+  border-radius: 10px; 
+}
+
+.applybutton button:hover {
+  background-color: rgb(109, 109, 109);
+  color: white;
+}
+
+.applybutton, .animaldetails{
+  text-align: center;
 }
 
 .w3-container {
