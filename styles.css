@@ -1,25 +1,36 @@
+/*
+******************************************
+Body Background Section
+******************************************
+*/
+
+/*
+Limit the body content in the middle 80% of the whole page,
+Set background color,   
+Set the default font to Muli
+*/
 body {
     margin-left: 10%;
     margin-right: 10%;
-    /* background-image: url("/picture/dog_background.jpg"); */
     background-size: cover;
     background-color: rgb(240, 233, 223);
     font-family: 'Muli';
 }
 
-.heading *{
-    color: #e89c2a;
-    text-decoration: none;
-    display:inline-block;
-    vertical-align: middle;
-}
+/*
+*******************************************
+Webpage Heading and Login/Signup Section
+*******************************************
+*/
 
+/* Put divider close between login and signup links */
 .divider {
   position: absolute;
   color:#717171;
   font-size: 24px;
 }
 
+/* Make the login/signup links floating at right of webpage heading area */
 .login {
   float:right;
   position:relative;
@@ -28,16 +39,36 @@ body {
   padding: 15px 15px;
 }
 
+/* Put a hover on the top of login and signup links when move the cursor on them */
 .login a:hover {
   background-color: #ddd;
   color: black;
 }
 
+/* Put a hignlight on the login and signup links when click on them */
 .login a.active {
   background-color: #e6b82f;
   color: white;
 }
 
+/*
+Set the color of website heading,
+Align the website heading, logo, and login/signup links vertically  
+*/
+.heading *{
+  color: #e89c2a;
+  text-decoration: none;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+/*
+*******************************************
+Webpage Top Navigation Section
+*******************************************
+*/
+
+/* Set margin, color, and round corner of the top navigation container */
 .topnav {
   margin-top: 10px;
   background-color: #d97228;
@@ -45,35 +76,46 @@ body {
   overflow: hidden;
   position: relative;
 }
-  
+
+/* Set the position, color, padding, and font of navigation elements */
 .topnav a, #searchbar{
   float: left;
   color: white;
   text-align: center;
-  padding: 20px 20px;
+  padding: 20px;
   text-decoration: none;
   font-size: 20px;
 }
   
+/* Put a hover on the top of navigation elements when move the cursor on them */
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
-  
+
+/* Put a hignlight on the navigation elements when click on them */
 .topnav a.active {
   background-color: #e6b82f;
   color: white;
 }
 
+/* Make the search bar floating at the right of the top navigation */
 .searchcontainer {
   float: right;
 }
 
+/* Make the text in search bar start from left */
 #searchbar{
   text-align: left;
   color:#717171;
+  /* border: none; */
+  padding: 19px
 }
 
+/* 
+Media query for the top navigation on screen less than 600px, 
+Stack all navigation elements vertically 
+*/
 @media screen and (max-width: 600px) {
   .topnav a, #searchbar {
     float: none;
@@ -86,6 +128,12 @@ body {
 }
 
 /* * {box-sizing:border-box} */
+
+/*
+********************************************
+Home Slideshow Section
+********************************************
+*/
 
 /* Slideshow container */
 .slidescontainer {
@@ -100,7 +148,7 @@ body {
   text-align: center;
 }
 
-/* Next & previous buttons */
+/* Next & previous buttons*/
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -127,7 +175,7 @@ body {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
+/* Caption text at the right side of slide pictures */
 .text {
   color: #fff;
   background-color: rgba(153, 153, 153, 0.8);
@@ -140,6 +188,7 @@ body {
   text-align: center;
 }
 
+/* navigation Button below the caption text on the slide pictures */
 .slidebutton {
   margin-top: 15%;
   margin-bottom: 10px;
@@ -149,23 +198,19 @@ body {
   border-radius: 10px; 
 }
 
+/* Put a hover on the top of navigation button when move the cursor on them */
 .slidebutton:hover {
   background-color: rgb(109, 109, 109);
   color: white;
 }
 
+/* Center the caption text and navigation button */
 .slidebutton, .text {
   text-align: center;
 }
 
-@media screen and (max-width: 600px) {
-  .slides.fade .text{
-    width: 100%;
-    left: 0;
-    top: auto;
-  }
-}
-/* The dots/bullets/indicators */
+
+/* The dot indicators below the slideshow */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -178,26 +223,52 @@ body {
   transition: background-color 0.6s ease;
 }
 
+/* 
+Put a highlight on the dots when the respevtive picture is selected
+and a cursor moved on the dot
+*/
 .active, .dot:hover {
   background-color: #717171;
 }
 
-/* Fading animation */
+/* Fading animation when switching slide pictures */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
 
+/* Control the transparent level in the intermediate steps of fading animation */
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
 }
 
+/* 
+Media query for caption text on screen less than 600px, 
+let the browser put the cpation text below the slide picture
+*/
+@media screen and (max-width: 600px) {
+  .slides.fade .text{
+    width: 100%;
+    left: 0;
+    top: auto;
+  }
+}
+
+/*
+********************************************
+Home About Us Section
+********************************************
+*/
+
+/* Center the about us heading */
 .aboutus h1 {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 50px;
 }
+
+/* Pack whoweare items around the center in a flexible container */
 .whoweare {
   font-size: 20px;
   display: flex;
@@ -207,6 +278,7 @@ body {
   overflow:auto;
 }
 
+/* Pack whatwedo items around the center in a flexible container */
 .whatwedo {
   font-size: 20px;
   display: flex;
@@ -216,11 +288,19 @@ body {
   overflow:auto;
 }
 
+/*
+********************************************
+Adopt Tab Folders Section
+********************************************
+*/
+
+/* Center the adoptable animals heading */
 .animals h1{
   text-align: center;
   margin-bottom: 50px;
 }
 
+/* Animal tabs */
 #tabs {
   overflow: hidden;
   width: 100%;
@@ -229,17 +309,19 @@ body {
   list-style: none;
 }
 
-#tabs li {
+/* #tabs li {
   float: left;
   margin: 0 .5em 0 0;
-}
+} */
 
+/* Set color, size, padding, etc, of animal tabs */
 #tabs a {
   position: relative;
   background: #ddd;
   background-image: linear-gradient(to bottom, #fff, #ddd);
   padding: .7em 3.5em;
   float: left;
+  font-size: 20px;
   text-decoration: none;
   color: #444;
   text-shadow: 0 1px 0 rgba(255,255,255,.8);
@@ -247,17 +329,16 @@ body {
   box-shadow: 0 2px 2px rgba(0,0,0,.4);
 }
 
-#tabs a:hover,
-#tabs a:hover::after,
-#tabs a:focus,
-#tabs a:focus::after {
+/* Put a hover on the top of animal tabs when move the cursor on them */
+#tabs a:hover, #tabs a:hover::after, #tabs a:focus, #tabs a:focus::after {
   background: #fff;
 }
 
-#tabs a:focus {
+/* #tabs a:focus {
   outline: 0;
-}
+} */
 
+/* Add beveled corner after the rectangular tab */
 #tabs a::after {
   content:'';
   position:absolute;
@@ -273,12 +354,13 @@ body {
   border-radius: 0 5px 0 0;
 }
 
-#tabs #current a,
-#tabs #current a::after {
+/* Make the color and stack order of selected tab consistent with the content */
+#tabs #current a, #tabs #current a::after {
   background: #fff;
   z-index: 3;
 }
 
+/* Set the color, padding, position, etc, of the content for animal tabs */
 #content {
   background: #fff;
   padding: 2em;
@@ -289,6 +371,7 @@ body {
   box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
   overflow: auto;
 }
+
 
 #tab1 {
   display: grid;
@@ -315,6 +398,11 @@ body {
   margin: 20px auto;
 }
 
+/*
+********************************************
+Adopt Animal Figures Section
+********************************************
+*/
 figure {
   margin: 10px;
   padding: 0px;
@@ -340,7 +428,7 @@ figcaption {
   z-index: 1;
   padding: 9px 0px 11px 0px;
   text-transform: uppercase;
-  font-size: 1vw;
+  font-size: 20px;
   position: absolute;
   bottom: 6px;
 }
@@ -349,31 +437,37 @@ figcaption {
   figcaption {
     font-size: 3vw;
   }
+
   #content {
     grid-template-columns: 1fr;
     width: 90vw;
   }
 }
 
+/*
+********************************************
+Ollie Information Section
+********************************************
+*/
 .ollie {
   text-align: center;
   margin-bottom: 50px;
   
 }
-.animaldetails table {
+.animalinfo table {
   width:40%;
   border-collapse: collapse;
   margin-left: 10%;
   background-color: #fbf9f9;
 }
 
-.animaldetails td {
+.animalinfo td {
   border: 1px solid #000000;
   text-align: left;
   padding: 8px;
 }
 
-.animaldetails tr:nth-child(even) {
+.animalinfo tr:nth-child(even) {
   background-color: #dddddd;
 }
 
@@ -383,7 +477,7 @@ figcaption {
   text-align: left;
 }
 
-.animaldetails {
+.animalinfo {
   margin-top: 30px;
   font-size: 20px;
   display: flex;
@@ -403,10 +497,41 @@ figcaption {
   color: white;
 }
 
-.applybutton, .animaldetails{
+.applybutton, .animalinfo{
   text-align: center;
 }
 
+/*
+********************************************
+Signup Input Section
+********************************************
+*/
+.signup input{
+  width: 60%;
+  padding: 10px 10px;
+  font-size: 20px;  
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.signup {
+  margin-left: 28%;
+}
+#submit {
+  border: solid;
+  padding: 20px 40px;
+  border-radius: 10px; 
+}
+#submit:hover {
+  background-color: rgb(109, 109, 109);
+  color: white;
+}
+
+/*
+********************************************
+Webpage Footer Section
+********************************************
+*/
 .w3-container {
   margin-top: 50px;
   background-color:#d97228;
@@ -444,6 +569,14 @@ figcaption {
   color: white;
 }
 
+.copyright {
+  margin-top: 10px;
+}
+/*
+********************************************
+Webpage Chatbox Section
+********************************************
+*/
 #chat-circle {
   position: fixed;
   bottom: 30px;
@@ -645,6 +778,4 @@ figcaption {
     margin-bottom: 70px;
 }
 
-.copyright {
-  margin-top: 10px;
-}
+
