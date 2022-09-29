@@ -290,7 +290,7 @@ Home About Us Section
 
 /*
 ********************************************
-Adopt Tab Folders Section
+Adopt Animal Tab Section
 ********************************************
 */
 
@@ -360,7 +360,7 @@ Adopt Tab Folders Section
   z-index: 3;
 }
 
-/* Set the color, padding, position, etc, of the content for animal tabs */
+/* Set the color, padding, position, etc, of content container below animal tabs */
 #content {
   background: #fff;
   padding: 2em;
@@ -372,25 +372,37 @@ Adopt Tab Folders Section
   overflow: auto;
 }
 
+/*
+********************************************
+Adopt Animal Figures Section
+********************************************
+*/
 
+/* Set grid style dispaly for all animal figures */
 #tab1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 75vw;
   margin: 20px auto;
 }
+
+/* Set grid style dispaly for dog figures */
 #tab2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 75vw;
   margin: 20px auto;
 }
+
+/* Set grid style dispaly for cat figures */
 #tab3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 75vw;
   margin: 20px auto;
 }
+
+/* Set grid style dispaly for other animal figures */
 #tab4 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -398,17 +410,17 @@ Adopt Tab Folders Section
   margin: 20px auto;
 }
 
-/*
-********************************************
-Adopt Animal Figures Section
-********************************************
-*/
+/* Set position of animal figures and captions */
 figure {
   margin: 10px;
   padding: 0px;
   position: relative;
 }
 
+/* 
+Set border and blur shadow around the figures,
+Set all figures in the same-sized box
+*/
 .animals img {
   filter: hue-rotate(10);
   padding: 0px;
@@ -420,6 +432,7 @@ figure {
   box-sizing: border-box;
 }
 
+/* Set background, color, font size, etc, of captions for all figures */
 figcaption {
   background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
@@ -433,6 +446,11 @@ figcaption {
   bottom: 6px;
 }
 
+/* 
+Media query for the tab content on screen less than 600px, 
+Keep the font size of captions in 3% of the viewport width,
+Keep the width of figures in 90% of the viewport width
+*/
 @media screen and (max-width: 600px) {
   figcaption {
     font-size: 3vw;
@@ -449,11 +467,15 @@ figcaption {
 Ollie Information Section
 ********************************************
 */
+
+/* Center the Ollie heading */
 .ollie {
   text-align: center;
   margin-bottom: 50px;
   
 }
+
+/* Set the width, margin, border, background color for the table of Ollie's basic info table */
 .animalinfo table {
   width:40%;
   border-collapse: collapse;
@@ -461,22 +483,26 @@ Ollie Information Section
   background-color: #fbf9f9;
 }
 
+/* Set the border, text alignment, and padding of table cell */
 .animalinfo td {
   border: 1px solid #000000;
   text-align: left;
   padding: 8px;
 }
 
+/* Set the babckground color of the even row of the table */
 .animalinfo tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+/* Set the width, margin, and text alignment of Ollie's detail info */
 .details {
   width: 30%;
   margin-left: 5%;
   text-align: left;
 }
 
+/* Set margin, font size, and display of Ollie's info container */
 .animalinfo {
   margin-top: 30px;
   font-size: 20px;
@@ -484,6 +510,7 @@ Ollie Information Section
   overflow:auto;
 }
 
+/* Set the margin, font size, padding, and border of the apply to adopt button */
 .applybutton button{
   margin-top: 30px;
   margin-bottom: 10px;
@@ -492,11 +519,13 @@ Ollie Information Section
   border-radius: 10px; 
 }
 
+/* Put a hover on the top of apply to adopt button when move the cursor on it */
 .applybutton button:hover {
   background-color: rgb(109, 109, 109);
   color: white;
 }
 
+/* Center the apply to adopt button with Ollie's info container */
 .applybutton, .animalinfo{
   text-align: center;
 }
@@ -506,6 +535,8 @@ Ollie Information Section
 Signup Input Section
 ********************************************
 */
+
+/* Set the width, padding, and border of text input for user signup */
 .signup input{
   width: 60%;
   padding: 10px 10px;
@@ -514,14 +545,20 @@ Signup Input Section
   border-left: none;
   border-right: none;
 }
+
+/* Set the margin of signup container */
 .signup {
   margin-left: 28%;
 }
+
+/* Set the border and padding of sunmit button */
 #submit {
   border: solid;
   padding: 20px 40px;
   border-radius: 10px; 
 }
+
+/* Put a hover on the top of submit button when move the cursor on it */
 #submit:hover {
   background-color: rgb(109, 109, 109);
   color: white;
@@ -532,7 +569,9 @@ Signup Input Section
 Webpage Footer Section
 ********************************************
 */
-.w3-container {
+
+/* Set the margin, background, color, display of footer container */
+.footercontainer {
   margin-top: 50px;
   background-color:#d97228;
   color:#fff;
@@ -541,7 +580,8 @@ Webpage Footer Section
   text-align: center;
 }
 
-.w3-container .fa {
+/* Set the padding, font size, width, etc of footer elements  */
+.footercontainer .fa {
   padding: 10px 10px;
   font-size: 32px;
   width: 50px;
@@ -550,33 +590,41 @@ Webpage Footer Section
   margin: 5px 2px;
 }
 
-.w3-container .fa:hover {
+/* Put a hover on the top of social media icons when move the cursor on it */
+.footercontainer .fa:hover {
     opacity: 0.7;
 }
 
+/* Set color of facebook icon */
 .fa-facebook {
   background: #3B5998;
   color: white;
 }
 
+/* Set color of twitter icon */
 .fa-twitter {
   background: #55ACEE;
   color: white;
 }
 
+/* Set color of instagram icon */
 .fa-instagram {
   background: #d6249f;
   color: white;
 }
 
+/* Set margin of copyright */
 .copyright {
   margin-top: 10px;
 }
+
 /*
 ********************************************
-Webpage Chatbox Section
+Webpage livechat Section
 ********************************************
 */
+
+/* Set position, margin, color, shadow, etc, of livechat circle */
 #chat-circle {
   position: fixed;
   bottom: 30px;
@@ -592,7 +640,7 @@ Webpage Chatbox Section
   box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.6), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-.btn#my-btn {
+/* .btn#my-btn {
     background: white;
     padding-top: 13px;
     padding-bottom: 12px;
@@ -600,8 +648,9 @@ Webpage Chatbox Section
     padding-right: 40px;
     padding-left: 40px;
     color: #d97228;
-}
-#chat-overlay {
+} */
+
+/* #chat-overlay {
     background: rgba(255,255,255,0.1);
     position: absolute;
     top: 0;
@@ -610,8 +659,9 @@ Webpage Chatbox Section
     height: 100%;
     border-radius: 50%;
     display: none;
-}
+} */
 
+/* Set display, color, position, demension, etc, of livechat box*/
 .chat-box {
   display:none;
   background: #efefef;
@@ -623,14 +673,11 @@ Webpage Chatbox Section
   max-width: 85vw;
   max-height:100vh;
   border-radius:5px;  
-/*   box-shadow: 0px 5px 35px 9px #464a92; */
+  box-shadow: 0px 5px 35px 9px #464a92;
   box-shadow: 0px 5px 35px 9px #ccc;
 }
-.chat-box-toggle {
-  float:right;
-  margin-right:15px;
-  cursor:pointer;
-}
+
+/* Set color, border, font size, etc, of the heading in the livechar box */
 .chat-box-header {
   background: #d97228;
   height:50px;
@@ -641,14 +688,24 @@ Webpage Chatbox Section
   font-size:20px;
   padding-top:17px;
 }
-.chat-box-body {
+
+/* Set the position and margin of the close button in the livechat box */
+.chat-box-toggle {
+  float:right;
+  margin-right:15px;
+  cursor:pointer;
+}
+
+
+/* .chat-box-body {
   position: relative;  
   height:370px;  
   height:auto;
   border:1px solid #ccc;  
   overflow: hidden;
-}
-.chat-box-body:after {
+} */ 
+
+/* .chat-box-body:after {
   content: "";
   opacity: 0.1;
   top: 0;
@@ -659,6 +716,8 @@ Webpage Chatbox Section
   position: absolute;
   z-index: -1;   
 }
+
+/* Set color, width, position, border of input text in the livechat box */
 #chat-input {
   background: #f4f7f9;
   width:100%; 
@@ -678,9 +737,13 @@ Webpage Chatbox Section
   border-bottom-left-radius:5px;
   overflow:hidden;  
 }
-.chat-input > form {
+
+/* Set the input container at the botton of the livechat box */
+.chat-input form {
     margin-bottom: 0;
 }
+
+/* Set the color of placeholder in the input box by different browsers */
 #chat-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #ccc;
 }
@@ -693,6 +756,8 @@ Webpage Chatbox Section
 #chat-input:-moz-placeholder { /* Firefox 18- */
   color: #ccc;
 }
+
+/* Set the position, color, broder of the message submit button */
 .chat-submit {  
   position:absolute;
   bottom:3px;
@@ -705,35 +770,45 @@ Webpage Chatbox Section
   width:35px;
   height:35px;  
 }
+
+/* Set padding, height, and content overflow of message display */
 .chat-logs {
   padding:15px; 
   height:370px;
   overflow-y:scroll;
 }
 
+/* Set the color of track for the scrollbar */
 .chat-logs::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #F5F5F5;
 }
 
+/* Set the width and color of scrollbar */
 .chat-logs::-webkit-scrollbar
 {
 	width: 5px;  
 	background-color: #F5F5F5;
 }
 
+/* Set the color of the draggable scrolling handle */
 .chat-logs::-webkit-scrollbar-thumb
 {
 	background-color: #d97228;
 }
 
+/* 
+Media query for the livechat box on screen less than 600px, 
+Keep the height of the livechat box in 40% of the viewport height
+*/
 @media only screen and (max-width: 500px) {
    .chat-logs {
         height:40vh;
     }
 }
 
+/* Set demension, border, and position of other's avatar */
 .chat-msg.user > .msg-avatar img {
   width:45px;
   height:45px;
@@ -741,6 +816,8 @@ Webpage Chatbox Section
   float:left;
   width:15%;
 }
+
+/* Set demension, border, and position of self's avatar */
 .chat-msg.self > .msg-avatar img {
   width:45px;
   height:45px;
@@ -748,6 +825,8 @@ Webpage Chatbox Section
   float:right;
   width:15%;
 }
+
+/* Set the color, padding, margin, position of the message text */
 .cm-msg-text {
   background:white;
   padding:10px 15px 10px 15px;  
@@ -759,23 +838,32 @@ Webpage Chatbox Section
   margin-bottom:20px;
   border-radius:30px;
 }
+
+/* Stagger the messages from different senders */
 .chat-msg {
   clear:both;    
 }
+
+/* 
+Put self's message at the right side of the livechat box,
+Set margin, background, and color of self's message
+*/
 .chat-msg.self > .cm-msg-text {  
   float:right;
   margin-right:10px;
   background: #d97228;
   color:white;
 }
-.cm-msg-button>ul>li {
+
+
+/* .cm-msg-button>ul>li {
   list-style:none;
   float:left;
   width:50%;
-}
+} 
 .cm-msg-button {
     clear: both;
     margin-bottom: 70px;
-}
+} */
 
 
