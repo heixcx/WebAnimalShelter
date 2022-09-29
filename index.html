@@ -1,15 +1,22 @@
 <html>
   <head>
+
     <meta charset="utf-8">
+
+    <!-- Import external stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Muli'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+    
+    <!-- Ttile of the website -->
     <title>LovingHeart Animal Project</title>  
+
   </head>
+
   <body>
 
+    <!-- Website logo and login/signup links -->
     <div class="heading">
       <a href="index.html"> 
         <img id="logo" src="/picture/pet-care.png" alt="heart" style="width:100px;height:100px;"/>
@@ -21,6 +28,7 @@
       </div>
     </div>
 
+    <!-- Top Navigation with search bar -->
     <div class="topnav">
       <a class="active" href="#home"><i class="fa fa-fw fa-home"></i>Home</a>
       <a href="#donate">Donate</a>
@@ -33,9 +41,9 @@
       </div>
     </div>
 
+    <!-- Slideshow contains full-width images with caption text and navigation buttons -->
     <div class="slidescontainer">
-      <!-- Full-width images with number and caption text-->
-     <div class="slides fade">
+      <div class="slides fade">
         <img src="/picture/cat_donate.jpeg" style="width:100%;"/>
         <p class="text">With your support, we can continue finding good homes for good kitties. See the many ways you can help.<br>
           <button class="slidebutton" onclick="window.location.href='#donate';">Donate</button>
@@ -57,14 +65,14 @@
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    
-    <!-- The dots/circles -->
+    <!-- The dot indicators for slide images -->
     <div style="text-align:center">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
     </div>
     
+    <!-- About us section includes pictures and paragrahs describing who we are and what we do -->
     <div class="aboutus">
       <h1>About Us</h1>
       <div class="whoweare">
@@ -83,7 +91,7 @@
       </div>
     </div>
 
-  
+    <!-- Footer section contains hours, social medias, location, and copyright -->
     <div class="footercontainer">
       <div style="width: 33.3%;">
         <h2 id="hours">Hours</h2>
@@ -102,19 +110,17 @@
     </div>
     <div class="copyright">© 2022 LovingHeart Animal Project. All rights reserved.</div>
 
-
+    <!-- Livechat for online support -->
     <div id="chatbody"> 
       <div id="chat-circle" class="btn btn-raised">
         <div id="chat-overlay"></div>
         <i class="fa fa-comment fa-2x"></i>
-      </div>
-      
+      </div> 
       <div class="chat-box">
         <div class="chat-box-header">Live Support<span class="chat-box-toggle"><i class="fa fa-close fa-2x"></i></span></div>
         <div class="chat-box-body">
           <div class="chat-box-overlay"></div>
           <div class="chat-logs"></div>
-          <!--chat-log -->
         </div>
         <div class="chat-input">      
           <form>
@@ -122,16 +128,15 @@
           <button type="submit" class="chat-submit" id="chat-submit"><i class="fa fa-paper-plane"></i></button>
           </form>      
         </div>
-      </div>  
+      </div>
     </div>
 
-
-    <script src="pictureslides.js"></script>
+    <!-- Import javascript for slideshow and livechat -->
+    <script src="slideshow.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="livechat.js"></script>
-    <!-- <script src="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic"></script> -->
-
-
+    
+    
   </body>
 
 </html>
