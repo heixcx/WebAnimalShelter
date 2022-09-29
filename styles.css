@@ -479,9 +479,10 @@ Ollie Information Section
 
 /* Set the width, margin, border, background color for the table of Ollie's basic info table */
 .animalinfo table {
-  width:40%;
+  width:100%;
   border-collapse: collapse;
   margin-left: 10%;
+	margin-right: 0%;
   background-color: #fbf9f9;
 }
 
@@ -499,8 +500,8 @@ Ollie Information Section
 
 /* Set the width, margin, and text alignment of Ollie's detail info */
 .details {
-  width: 30%;
-  /* margin-left: 5%; */
+  width: 100%;
+  margin-left: 2%;
 	margin-right: 10%;
   text-align: left;
 }
@@ -509,7 +510,7 @@ Ollie Information Section
 .animalinfo {
   margin-top: 30px;
   font-size: 20px;
-  display: flex;
+  display: inline-flex;
   overflow:auto;
 }
 
@@ -533,6 +534,17 @@ Ollie Information Section
   text-align: center;
 }
 
+/* 
+Media query for caption text on screen less than 600px, 
+let the browser move the animal info below the slide picture
+*/
+@media screen and (max-width: 600px) {
+  .slidecontainer, .animalinfo {
+		width: 100%;
+		display: contents;
+		text-align: center;
+	}
+}
 /*
 ********************************************
 Signup Input Section
@@ -597,9 +609,9 @@ Alternative Ollie Slideshow Section
 /* Next & previous buttons */
 .alterprev, .alternext {
   cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
+  position:absolute;
+  top: 40%; 
+	width: auto;
   padding: 16px;
   color: white;
   font-weight: bold;
@@ -616,8 +628,7 @@ Alternative Ollie Slideshow Section
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.alterprev:hover,
-.aalternext:hover {
+.alterprev:hover, .aalternext:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -649,10 +660,20 @@ Alternative Ollie Information Section
 ********************************************
 */
 
+/* Set margin, font size, and display of Ollie's info container */
+.alteranimalinfo {
+	margin-left: 2%;
+	margin-right: 10%;
+	position: absolute;
+  font-size: 20px;
+	text-align: center;
+	overflow: auto;
+}
+
 /* Set the width, margin, border, background color for the table of Ollie's basic info table */
 .alteranimalinfo table {
-	width: 80%;
-	margin-right: 10%;
+	width: 100%;
+	height: 80px;
   border-collapse: collapse;
   background-color: #fbf9f9;
 }
@@ -671,43 +692,15 @@ Alternative Ollie Information Section
 
 /* Set the width, margin, and text alignment of Ollie's detail info */
 .alterdetails {
-	width: 80%;
-	margin-bottom: 10%;
+	width: 100%;
+	height: 200px;
+	margin-bottom: 5%;
   text-align:justify;
 	overflow: auto;
 }
 
-/* Set margin, font size, and display of Ollie's info container */
-.alteranimalinfo {
-	position: absolute;
-	left:60%;
-  font-size: 20px;
-}
-
-.alterslidecontainer, .alteranimalinfo {
-	display: inline-block;
-	vertical-align: top;
-}
-
-/* 
-Media query for caption text on screen less than 600px, 
-let the browser put the cpation text below the slide picture
-*/
-
-@media screen and (max-width: 600px) {
-  .alterslidecontainer, .alteranimalinfo, .alterapplybutton {
-    width: 100%;
-    left: 0;
-		display: contents;
-	}
-  .alteranimalinfo {
-		margin-left: 10%;
-	}
-}
-
 /* Set the margin, font size, padding, and border of the apply to adopt button */
 .alterapplybutton button{
-  margin-top: 30px;
   margin-bottom: 10px;
   font-size: 20px;
   padding: 20px 40px;
@@ -720,6 +713,22 @@ let the browser put the cpation text below the slide picture
   color: white;
 }
 
+/* Align the slideshow and animal info horizontally */
+.alterslidecontainer, .alteranimalinfo {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* 
+Media query for caption text on screen less than 600px, 
+let the browser move the animal info below the slide picture
+*/
+@media screen and (max-width: 600px) {
+  .alterslidecontainer, .alteranimalinfo {
+		display: contents;
+		text-align: center;
+	}
+}
 
 /*
 ********************************************
