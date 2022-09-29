@@ -106,10 +106,12 @@ Webpage Top Navigation Section
 
 /* Make the text in search bar start from left */
 #searchbar{
-  text-align: left;
-  color:#717171;
-  /* border: none; */
-  padding: 19px
+	text-align: left;
+	color: #717171;
+	border: none;
+	padding: 16px;
+	margin: 5px 0;
+	border-radius: 10px;
 }
 
 /* 
@@ -563,6 +565,137 @@ Signup Input Section
   background-color: rgb(109, 109, 109);
   color: white;
 }
+
+/*
+********************************************
+Alternative Ollie Slideshow Section
+********************************************
+*/
+
+/* Set the margin of alternative Ollie heading */
+.alterollie {
+  margin-bottom: 50px;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.alterslidecontainer {
+  position: relative;
+}
+
+/* Hide the images by default */
+.alterlides {
+	float:left;
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.alterprev, .alternext {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.alternext {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.alterprev:hover,
+.aalternext:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 20%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/*
+********************************************
+Alternative Ollie Information Section
+********************************************
+*/
+
+/* Set the width, margin, border, background color for the table of Ollie's basic info table */
+.alteranimalinfo table {
+	width: 100%;
+  border-collapse: collapse;
+  background-color: #fbf9f9;
+}
+
+/* Set the border, text alignment, and padding of table cell */
+.alteranimalinfo td {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Set the babckground color of the even row of the table */
+.alteranimalinfo tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* Set the width, margin, and text alignment of Ollie's detail info */
+.alterdetails {
+  text-align:justify;
+}
+
+/* Set margin, font size, and display of Ollie's info container */
+.alteranimalinfo {
+	position: absolute;
+	top:0em;
+	left:40em;
+  font-size: 20px;
+}
+
+/* Set the margin, font size, padding, and border of the apply to adopt button */
+.alterapplybutton button{
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 20px 40px;
+  border-radius: 10px; 
+}
+
+/* Put a hover on the top of apply to adopt button when move the cursor on it */
+.alterapplybutton button:hover {
+  background-color: rgb(109, 109, 109);
+  color: white;
+}
+
 
 /*
 ********************************************

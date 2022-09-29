@@ -42,34 +42,42 @@
     </div>
 
     <!-- Heading of Ollie detail page -->
-    <h1 class="ollie">Ollie</h1>
+    <h1 class="alterollie">Ollie</h1>
 
     <!-- Slideshow contains images of Ollie -->
-    <div class="slidescontainer">
-        <div class="slides fade">
-          <img src="/picture/ollie1.jpg" style="width:80%;"/>
-        </div>
-        <div class="slides fade">
-          <img src="/picture/ollie2.jpg" style="width:80%;"/>
-        </div>   
-        <div class="slides fade">
-          <img src="/picture/ollie3.jpg" style="width:80%;"/>
-        </div>
-        <!--Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)" style="margin-left: 10%;">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)" style="margin-right: 10%;">&#10095;</a>
-    </div>
-      
-    <!-- The dot indicators of corresponding image of Ollie -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+    <div class="alterslidecontainer">
+			<div class="alterslides">
+					<img src="/picture/ollie1.jpg" style="width:60%">
+			</div>
+		
+			<div class="alterslides">
+					<img src="/picture/ollie2.jpg" style="width:60%">
+			</div>
+		
+			<div class="alterslides">
+					<img src="/picture/ollie3.jpg" style="width:60%">
+			</div>
+
+			<!--Next and previous buttons -->
+			<a class="alterprev" onclick="plusSlides(-1)" style="margin-left: 10%;">&#10094;</a>
+			<a class="alternext" onclick="plusSlides(1)" style="margin-right: 10%;">&#10095;</a>
+
+			<!-- Thumbnail images -->
+			<div class="row">
+			<div class="column">
+				<img class="demo cursor" src="picture/ollie1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="/picture/ollie2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="/picture/ollie3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+			</div>
     </div>
   
     <!-- Ollie basic info table and details -->
-    <div class="animalinfo">
-			<table id="basics">
+    <div class="alteranimalinfo">
+			<table id="alterbasics">
 				<tr>
 					<td>ID:</td>
 					<td>1</td>
@@ -99,11 +107,11 @@
 					<td>No</td>
 				</tr>
 			</table>
-      <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ab commodi, eaque veritatis, voluptatibus libero possimus earum nemo eos quae dignissimos aspernatur esse molestias laborum odit rerum tempore mollitia corrupti.</p>
+      <p class="alterdetails">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ab commodi, eaque veritatis, voluptatibus libero possimus earum nemo eos quae dignissimos aspernatur esse molestias laborum odit rerum tempore mollitia corrupti.</p>
     </div>
 
     <!-- Apply to adopt button -->
-    <div class="applybutton">
+    <div class="alterapplybutton">
       <button onclick="window.location.href='#application';">Apply To Adopt</button>
     </div>
 
