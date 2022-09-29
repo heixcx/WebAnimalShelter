@@ -500,7 +500,8 @@ Ollie Information Section
 /* Set the width, margin, and text alignment of Ollie's detail info */
 .details {
   width: 30%;
-  margin-left: 5%;
+  /* margin-left: 5%; */
+	margin-right: 10%;
   text-align: left;
 }
 
@@ -580,11 +581,11 @@ Alternative Ollie Slideshow Section
 /* Position the image container (needed to position the left and right arrows) */
 .alterslidecontainer {
   position: relative;
+	width: 60%;
 }
 
 /* Hide the images by default */
-.alterlides {
-	float:left;
+.alterslides.fade{
   display: none;
 }
 
@@ -600,7 +601,6 @@ Alternative Ollie Slideshow Section
   top: 40%;
   width: auto;
   padding: 16px;
-  margin-top: -50px;
   color: white;
   font-weight: bold;
   font-size: 20px;
@@ -627,10 +627,10 @@ Alternative Ollie Slideshow Section
   clear: both;
 }
 
-/* Six columns side by side */
+/* Three columns side by side */
 .column {
   float: left;
-  width: 20%;
+  width: 33.333333333%;
 }
 
 /* Add a transparency effect for thumnbail images */
@@ -651,7 +651,8 @@ Alternative Ollie Information Section
 
 /* Set the width, margin, border, background color for the table of Ollie's basic info table */
 .alteranimalinfo table {
-	width: 100%;
+	width: 80%;
+	margin-right: 10%;
   border-collapse: collapse;
   background-color: #fbf9f9;
 }
@@ -670,15 +671,38 @@ Alternative Ollie Information Section
 
 /* Set the width, margin, and text alignment of Ollie's detail info */
 .alterdetails {
+	width: 80%;
+	margin-bottom: 10%;
   text-align:justify;
+	overflow: auto;
 }
 
 /* Set margin, font size, and display of Ollie's info container */
 .alteranimalinfo {
 	position: absolute;
-	top:0em;
-	left:40em;
+	left:60%;
   font-size: 20px;
+}
+
+.alterslidecontainer, .alteranimalinfo {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* 
+Media query for caption text on screen less than 600px, 
+let the browser put the cpation text below the slide picture
+*/
+
+@media screen and (max-width: 600px) {
+  .alterslidecontainer, .alteranimalinfo, .alterapplybutton {
+    width: 100%;
+    left: 0;
+		display: contents;
+	}
+  .alteranimalinfo {
+		margin-left: 10%;
+	}
 }
 
 /* Set the margin, font size, padding, and border of the apply to adopt button */
@@ -937,7 +961,7 @@ Keep the height of the livechat box in 40% of the viewport height
 */
 @media only screen and (max-width: 500px) {
    .chat-logs {
-        height:40vh;
+    height:40vh;
     }
 }
 

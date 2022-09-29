@@ -46,34 +46,36 @@
 
     <!-- Slideshow contains images of Ollie -->
     <div class="alterslidecontainer">
-			<div class="alterslides">
-					<img src="/picture/ollie1.jpg" style="width:60%">
+			<div class="alterslides fade">
+					<img src="/picture/ollie1.jpg" style="width:100%">
 			</div>
 		
-			<div class="alterslides">
-					<img src="/picture/ollie2.jpg" style="width:60%">
+			<div class="alterslides fade">
+					<img src="/picture/ollie2.jpg" style="width:100%">
 			</div>
 		
-			<div class="alterslides">
-					<img src="/picture/ollie3.jpg" style="width:60%">
+			<div class="alterslides fade">
+					<img src="/picture/ollie3.jpg" style="width:100%">
 			</div>
+		
 
 			<!--Next and previous buttons -->
-			<a class="alterprev" onclick="plusSlides(-1)" style="margin-left: 10%;">&#10094;</a>
-			<a class="alternext" onclick="plusSlides(1)" style="margin-right: 10%;">&#10095;</a>
+			<a class="alterprev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="alternext" onclick="plusSlides(1)">&#10095;</a>
 
 			<!-- Thumbnail images -->
 			<div class="row">
-			<div class="column">
-				<img class="demo cursor" src="picture/ollie1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-			</div>
-			<div class="column">
-				<img class="demo cursor" src="/picture/ollie2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-			</div>
-			<div class="column">
-				<img class="demo cursor" src="/picture/ollie3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-			</div>
-    </div>
+				<div class="column">
+					<img class="demo cursor" src="picture/ollie1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+				</div>
+				<div class="column">
+					<img class="demo cursor" src="/picture/ollie2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+				</div>
+				<div class="column">
+					<img class="demo cursor" src="/picture/ollie3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+				</div>
+      </div>
+		</div>
   
     <!-- Ollie basic info table and details -->
     <div class="alteranimalinfo">
@@ -157,7 +159,7 @@
     </div>
 
     <!-- Import javascript for slideshow and livechat -->
-    <script src="slideshow.js"></script>
+    <script src="alterslideshow.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="livechat.js"></script>
     
