@@ -250,10 +250,11 @@ Media query for caption text on screen less than 600px,
 let the browser put the cpation text below the slide picture
 */
 @media screen and (max-width: 600px) {
-  .slides.fade .text{
-    width: 100%;
-    left: 0;
-    top: auto;
+	.slidescontainer .text{
+		width: 100%;
+		display: contents;
+		color: rgba(77, 77, 77, 0.8);
+    top: 100px;
   }
 }
 
@@ -270,6 +271,11 @@ Home About Us Section
   margin-bottom: 50px;
 }
 
+/* Set the width of whoweare image*/
+.whoweare img {
+	width: 50%;
+}
+
 /* Pack whoweare items around the center in a flexible container */
 .whoweare {
   font-size: 20px;
@@ -280,6 +286,11 @@ Home About Us Section
   overflow:auto;
 }
 
+/* Set the width of whatwedo image*/
+.whatwedo img {
+	width: 50%;
+}
+
 /* Pack whatwedo items around the center in a flexible container */
 .whatwedo {
   font-size: 20px;
@@ -288,6 +299,19 @@ Home About Us Section
   background-color: #fbf9f9;
   text-align: center;
   overflow:auto;
+}
+
+/* 
+Media query for caption text on screen less than 600px, 
+let the browser put all elements in a vertical line
+*/
+@media screen and (max-width: 600px) {
+	.whoweare img, .whatwedo img {
+		width: 100%;
+	}
+	.whoweare, .whatwedo {
+		display:block;
+	}
 }
 
 /*
@@ -457,7 +481,6 @@ Keep the width of figures in 90% of the viewport width
   figcaption {
     font-size: 3vw;
   }
-
   #content {
     grid-template-columns: 1fr;
     width: 90vw;
@@ -478,11 +501,9 @@ Ollie Information Section
 }
 
 /* Set the width, margin, border, background color for the table of Ollie's basic info table */
-.animalinfo table {
+.animalinfo .basics {
   width:100%;
   border-collapse: collapse;
-  margin-left: 10%;
-	margin-right: 0%;
   background-color: #fbf9f9;
 }
 
@@ -502,7 +523,6 @@ Ollie Information Section
 .details {
   width: 100%;
   margin-left: 2%;
-	margin-right: 10%;
   text-align: left;
 }
 
@@ -531,7 +551,7 @@ Ollie Information Section
 
 /* Center the apply to adopt button with Ollie's info container */
 .applybutton, .animalinfo{
-  text-align: center;
+	text-align: center;
 }
 
 /* 
@@ -539,10 +559,10 @@ Media query for caption text on screen less than 600px,
 let the browser move the animal info below the slide picture
 */
 @media screen and (max-width: 600px) {
-  .slidecontainer, .animalinfo {
+  .slides.fade, .animalinfo {
 		width: 100%;
-		display: contents;
-		text-align: center;
+		display:contents;
+		text-align:center;
 	}
 }
 /*
@@ -632,7 +652,9 @@ Alternative Ollie Slideshow Section
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Set the margin, display, etc, of thumbnail image container */
 .row:after {
+	margin-bottom: 20px;
   content: "";
   display: table;
   clear: both;
@@ -648,9 +670,8 @@ Alternative Ollie Slideshow Section
 .demo {
   opacity: 0.6;
 }
-
-.active,
-.demo:hover {
+ /* Remove the hover from the selected image */
+.active, .demo:hover {
   opacity: 1;
 }
 
