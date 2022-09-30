@@ -1,3 +1,4 @@
+// Set the fisrt slide as the default slide 
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -11,6 +12,7 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+// Activate the selected slide and dot indicator 
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("slides");

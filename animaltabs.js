@@ -1,3 +1,4 @@
+//Jquery for achieving tab folder display 
 $(document).ready(function() {
     $("#content").find("[id^='tab']").hide(); // Hide all content
     $("#tabs li:first").attr("id","current"); // Activate the first tab
