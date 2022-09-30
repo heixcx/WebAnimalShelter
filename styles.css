@@ -521,7 +521,7 @@ Ollie Information Section
 .details {
   width: 100%;
   margin-left: 2%;
-  text-align: left;
+	text-align:justify;
 }
 
 /* Set margin, font size, and display of Ollie's info container */
