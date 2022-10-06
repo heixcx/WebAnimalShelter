@@ -265,8 +265,8 @@ Home About Us Section
 /* Center the about us heading */
 .aboutus h1 {
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
 
 /* Set the width of whoweare image*/
@@ -274,10 +274,27 @@ Home About Us Section
 	width: 50%;
 }
 
+/* Set the image width specifically for firefox */
+@-moz-document url-prefix() {
+  .whoweare img {
+		width: 225%;
+  }
+}
+
 /* Pack whoweare items around the center in a flexible container */
 .whoweare {
   font-size: 20px;
-  display: flex;
+  display: inline-flex;
+  align-items: center;
+  background-color: #fbf9f9;
+  text-align: center;
+  overflow:auto;
+}
+
+/* Pack whatwedo items around the center in a flexible container */
+.whatwedo {
+  font-size: 20px;
+  display: inline-flex;
   align-items: center;
   background-color: #fbf9f9;
   text-align: center;
@@ -289,473 +306,23 @@ Home About Us Section
 	width: 50%;
 }
 
-/* Pack whatwedo items around the center in a flexible container */
-.whatwedo {
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  background-color: #fbf9f9;
-  text-align: center;
-  overflow:auto;
+/* Set the image width specifically for Firefox */
+@-moz-document url-prefix() {
+  .whatwedo img {
+		width: 148%;
+  }
 }
 
 /* 
 Media query for caption text on screen less than 600px, 
 let the browser put all elements in a vertical line
 */
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
 	.whoweare img, .whatwedo img {
 		width: 100%;
 	}
 	.whoweare, .whatwedo {
 		display:block;
-	}
-}
-
-/*
-********************************************
-Adopt Animal Tab Section
-********************************************
-*/
-
-/* Center the adoptable animals heading */
-.animals h1{
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-/* Animal tabs */
-#tabs {
-  overflow: hidden;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* #tabs li {
-  float: left;
-  margin: 0 .5em 0 0;
-} */
-
-/* Set color, size, padding, etc, of animal tabs */
-#tabs a {
-  position: relative;
-  background: #ddd;
-  background-image: linear-gradient(to bottom, #fff, #ddd);
-  padding: .7em 3.5em;
-  float: left;
-  font-size: 20px;
-  text-decoration: none;
-  color: #444;
-  text-shadow: 0 1px 0 rgba(255,255,255,.8);
-  border-radius: 5px 0 0 0;
-  box-shadow: 0 2px 2px rgba(0,0,0,.4);
-}
-
-/* Put a hover on the top of animal tabs when move the cursor on them */
-#tabs a:hover, #tabs a:hover::after, #tabs a:focus, #tabs a:focus::after {
-  background: #fff;
-}
-
-/* #tabs a:focus {
-  outline: 0;
-} */
-
-/* Add beveled corner after the rectangular tab */
-#tabs a::after {
-  content:'';
-  position:absolute;
-  z-index: 1;
-  top: 0;
-  right: -.5em;
-  bottom: 0;
-  width: 1em;
-  background: #ddd;
-  background-image: linear-gradient(to bottom, #fff, #ddd);
-  box-shadow: 2px 2px 2px rgba(0,0,0,.4);
-  transform: skew(10deg);
-  border-radius: 0 5px 0 0;
-}
-
-/* Make the color and stack order of selected tab consistent with the content */
-#tabs #current a, #tabs #current a::after {
-  background: #fff;
-  z-index: 3;
-}
-
-/* Set the color, padding, position, etc, of content container below animal tabs */
-#content {
-  background: #fff;
-  padding: 2em;
-  height: 100%;
-  position: relative;
-  z-index: 2;
-  border-radius: 0 5px 5px 5px;
-  box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
-  overflow: auto;
-}
-
-/*
-********************************************
-Adopt Animal Figures Section
-********************************************
-*/
-
-/* Set grid style dispaly for all animal figures */
-#tab1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 75vw;
-  margin: 20px auto;
-}
-
-/* Set grid style dispaly for dog figures */
-#tab2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 75vw;
-  margin: 20px auto;
-}
-
-/* Set grid style dispaly for cat figures */
-#tab3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 75vw;
-  margin: 20px auto;
-}
-
-/* Set grid style dispaly for other animal figures */
-#tab4 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 75vw;
-  margin: 20px auto;
-}
-
-/* Set position of animal figures and captions */
-figure {
-  margin: 10px;
-  padding: 0px;
-  position: relative;
-}
-
-/* 
-Set border and blur shadow around the figures,
-Set all figures in the same-sized box
-*/
-.animals img {
-  filter: hue-rotate(10);
-  padding: 0px;
-  border: 3px solid #fff;
-  box-shadow: 0px 0px 3px #ccc;
-  z-index: 0;
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Set background, color, font size, etc, of captions for all figures */
-figcaption {
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 100%;
-  text-align: center;
-  color: #5e423f;
-  z-index: 1;
-  padding: 9px 0px 11px 0px;
-  text-transform: uppercase;
-  font-size: 20px;
-  position: absolute;
-  bottom: 6px;
-}
-
-/* 
-Media query for the tab content on screen less than 600px, 
-Keep the font size of captions in 3% of the viewport width,
-Keep the width of figures in 90% of the viewport width
-*/
-@media screen and (max-width: 600px) {
-  figcaption {
-    font-size: 3vw;
-  }
-  #content {
-    grid-template-columns: 1fr;
-    width: 90vw;
-  }
-}
-
-/*
-********************************************
-Ollie Information Section
-********************************************
-*/
-
-/* Center the Ollie heading */
-.ollie {
-  text-align: center;
-  margin-bottom: 50px;
-  
-}
-
-/* Set the width, margin, border, background color for the table of Ollie's basic info table */
-.animalinfo .basics {
-  width:100%;
-  border-collapse: collapse;
-  background-color: #fbf9f9;
-}
-
-/* Set the border, text alignment, and padding of table cell */
-.animalinfo td {
-  border: 1px solid #000000;
-  text-align: left;
-  padding: 8px;
-}
-
-/* Set the babckground color of the even row of the table */
-.animalinfo tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
-/* Set the width, margin, and text alignment of Ollie's detail info */
-.details {
-  width: 100%;
-  margin-left: 2%;
-	text-align:justify;
-}
-
-/* Set margin, font size, and display of Ollie's info container */
-.animalinfo {
-  margin-top: 30px;
-  font-size: 20px;
-  display: inline-flex;
-  overflow:auto;
-}
-
-/* Set the margin, font size, padding, and border of the apply to adopt button */
-.applybutton button{
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-size: 20px;
-  padding: 20px 40px;
-  border-radius: 10px; 
-}
-
-/* Put a hover on the top of apply to adopt button when move the cursor on it */
-.applybutton button:hover {
-  background-color: rgb(109, 109, 109);
-  color: white;
-}
-
-/* Center the apply to adopt button with Ollie's info container */
-.applybutton, .animalinfo{
-	text-align: center;
-}
-
-/* 
-Media query for caption text on screen less than 600px, 
-let the browser move the animal info below the slide picture
-*/
-@media screen and (max-width: 600px) {
-  .slides.fade, .animalinfo {
-		width: 100%;
-		display:contents;
-		text-align:center;
-	}
-}
-/*
-********************************************
-Signup Input Section
-********************************************
-*/
-
-/* Set the width, padding, and border of text input for user signup */
-.signup input{
-  width: 60%;
-  padding: 10px 10px;
-  font-size: 20px;  
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-
-/* Set the margin of signup container */
-.signup {
-  margin-left: 28%;
-}
-
-/* Set the border and padding of sunmit button */
-#submit {
-  border: solid;
-  padding: 20px 40px;
-  border-radius: 10px; 
-}
-
-/* Put a hover on the top of submit button when move the cursor on it */
-#submit:hover {
-  background-color: rgb(109, 109, 109);
-  color: white;
-}
-
-/*
-********************************************
-Alternative Ollie Slideshow Section
-********************************************
-*/
-
-/* Set the margin of alternative Ollie heading */
-.alterollie {
-  margin-bottom: 50px;
-}
-
-/* Position the image container (needed to position the left and right arrows) */
-.alterslidecontainer {
-  position: relative;
-	/* width: 60%; */
-}
-
-/* Hide the images by default */
-.alterslides.fade{
-	margin-right: 40%;
-	display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.alterprev, .alternext {
-  cursor: pointer;
-  position:absolute;
-  top: 40%; 
-	width: auto;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.alternext {
-  right: 40%;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.alterprev:hover, .aalternext:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Set the margin, display, etc, of thumbnail image container */
-.row{
-	margin-right: 40%;
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Three columns side by side */
-.column {
-  float: left;
-  width: 33.333333333%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
- /* Remove the hover from the selected image */
-.active, .demo:hover {
-  opacity: 1;
-}
-
-/*
-********************************************
-Alternative Ollie Information Section
-********************************************
-*/
-
-/* Set margin, font size, and display of Ollie's info container */
-.alteranimalinfo {
-	margin-left: -30%;
-	margin-right: 10%;
-	position: absolute;
-  font-size: 20px;
-	text-align: center;
-	overflow: auto;
-}
-
-/* Set the width, margin, border, background color for the table of Ollie's basic info table */
-.alteranimalinfo #alterbasics {
-	width: 100%;
-	height: 80px;
-  border-collapse: collapse;
-  background-color: #fbf9f9;
-}
-
-/* Set the border, text alignment, and padding of table cell */
-.alteranimalinfo td {
-  border: 1px solid #000000;
-  text-align: left;
-  padding: 8px;
-}
-
-/* Set the babckground color of the even row of the table */
-.alteranimalinfo tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
-/* Set the width, margin, and text alignment of Ollie's detail info */
-.alterdetails {
-	width: 100%;
-	height: 200px;
-	margin-bottom: 5%;
-  text-align:justify;
-	overflow: auto;
-}
-
-/* Set the margin, font size, padding, and border of the apply to adopt button */
-.alterapplybutton button{
-  margin-bottom: 10px;
-  font-size: 20px;
-  padding: 20px 40px;
-  border-radius: 10px; 
-}
-
-/* Put a hover on the top of apply to adopt button when move the cursor on it */
-.alterapplybutton button:hover {
-  background-color: rgb(109, 109, 109);
-  color: white;
-}
-
-/* Align the slideshow and animal info horizontally */
-.alterslidecontainer, .alteranimalinfo {
-	display:inline-block;
-	vertical-align: top;
-}
-
-/* 
-Media query for caption text on screen less than 600px, 
-Adjust the position of next button, margin of slide image and info table,
-Let the browser move the animal info below the slide picture
-*/
-@media screen and (max-width: 600px) {
-	.alternext {
-		right: 0;
-	}
-	.alteranimalinfo #alterbasics {
-		margin-top: 20px;
-	}
-	.alterslides.fade, .row, .alteranimalinfo {
-		margin-right: 0;
-		display: contents;
-		text-align: center;
 	}
 }
 
@@ -1049,8 +616,6 @@ Set margin, background, and color of self's message
   background: #d97228;
   color:white;
 }
-
-
 /* .cm-msg-button>ul>li {
   list-style:none;
   float:left;
@@ -1061,4 +626,478 @@ Set margin, background, and color of self's message
     margin-bottom: 70px;
 } */
 
+/*
+********************************************
+Adopt Animal Tab Section
+********************************************
+*/
 
+/* Center the adoptable animals heading */
+.animals h1{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Animal tabs */
+#tabs {
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* #tabs li {
+  float: left;
+  margin: 0 .5em 0 0;
+} */
+
+/* Set color, size, padding, etc, of animal tabs */
+#tabs a {
+  position: relative;
+  background: #ddd;
+  background-image: linear-gradient(to bottom, #fff, #ddd);
+  padding: .7em 3.5em;
+  float: left;
+  font-size: 20px;
+  text-decoration: none;
+  color: #444;
+  text-shadow: 0 1px 0 rgba(255,255,255,.8);
+  border-radius: 5px 0 0 0;
+  box-shadow: 0 2px 2px rgba(0,0,0,.4);
+}
+
+/* Put a hover on the top of animal tabs when move the cursor on them */
+#tabs a:hover, #tabs a:hover::after, #tabs a:focus, #tabs a:focus::after {
+  background: #fff;
+}
+
+/* #tabs a:focus {
+  outline: 0;
+} */
+
+/* Add beveled corner after the rectangular tab */
+#tabs a::after {
+  content:'';
+  position:absolute;
+  z-index: 1;
+  top: 0;
+  right: -.5em;
+  bottom: 0;
+  width: 1em;
+  background: #ddd;
+  background-image: linear-gradient(to bottom, #fff, #ddd);
+  box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+  transform: skew(10deg);
+  border-radius: 0 5px 0 0;
+}
+
+/* Make the color and stack order of selected tab consistent with the content */
+#tabs #current a, #tabs #current a::after {
+  background: #fff;
+  z-index: 3;
+}
+
+/* Set the color, padding, position, etc, of content container below animal tabs */
+#content {
+  background: #fff;
+  padding: 2em;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  border-radius: 0 5px 5px 5px;
+  box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+  overflow: auto;
+}
+
+/*
+********************************************
+Adopt Animal Figures Section
+********************************************
+*/
+
+/* Set grid style dispaly for all animal figures */
+#tab1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 75vw;
+  margin: 20px auto;
+}
+
+/* Set grid style dispaly for dog figures */
+#tab2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 75vw;
+  margin: 20px auto;
+}
+
+/* Set grid style dispaly for cat figures */
+#tab3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 75vw;
+  margin: 20px auto;
+}
+
+/* Set grid style dispaly for other animal figures */
+#tab4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 75vw;
+  margin: 20px auto;
+}
+
+/* Set position of animal figures and captions */
+figure {
+  margin: 10px;
+  padding: 0px;
+  position: relative;
+}
+
+/* 
+Set border and blur shadow around the figures,
+Set all figures in the same-sized box
+*/
+.animals img {
+  filter: hue-rotate(10);
+  padding: 0px;
+  border: 3px solid #fff;
+  box-shadow: 0px 0px 3px #ccc;
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Set background, color, font size, etc, of captions for all figures */
+figcaption {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  text-align: center;
+  color: #5e423f;
+  z-index: 1;
+  padding: 9px 0px 11px 0px;
+  text-transform: uppercase;
+  font-size: 20px;
+  position: absolute;
+  bottom: 6px;
+}
+
+/* 
+Media query for the tab content on screen less than 600px, 
+Keep the font size of captions in 3% of the viewport width,
+Keep the width of figures in 90% of the viewport width
+*/
+@media screen and (max-width: 600px) {
+  figcaption {
+    font-size: 3vw;
+  }
+  #content {
+    grid-template-columns: 1fr;
+    width: 90vw;
+  }
+}
+
+/*
+********************************************
+Ollie Information Section
+********************************************
+*/
+
+/* Center the Ollie heading */
+.ollie {
+  text-align: center;
+  margin-bottom: 50px;
+  
+}
+
+/* Set the width, margin, border, background color for the table of Ollie's basic info table */
+.animalinfo .basics {
+  width:100%;
+  border-collapse: collapse;
+  background-color: #fbf9f9;
+}
+
+/* Set the border, text alignment, and padding of table cell */
+.animalinfo td {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Set the babckground color of the even row of the table */
+.animalinfo tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* Set the width, margin, and text alignment of Ollie's detail info */
+.details {
+  width: 100%;
+  margin-left: 2%;
+	text-align:justify;
+	overflow: auto;
+}
+
+/* Set margin, font size, and display of Ollie's info container */
+.animalinfo {
+  margin-top: 30px;
+  font-size: 20px;
+  display: inline-flex;
+  overflow: auto;
+}
+
+/* Set the margin, font size, padding, and border of the apply to adopt button */
+.applybutton button{
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 20px 40px;
+  border-radius: 10px; 
+}
+
+/* Put a hover on the top of apply to adopt button when move the cursor on it */
+.applybutton button:hover {
+  background-color: rgb(109, 109, 109);
+  color: white;
+}
+
+/* Center the apply to adopt button with Ollie's info container */
+.applybutton, .animalinfo{
+	text-align: center;
+}
+
+/* 
+Media query for caption text on screen less than 600px, 
+let the browser move the animal info below the slide picture
+*/
+@media screen and (max-width: 600px) {
+  .slides.fade, .animalinfo {
+		width: 100%;
+		display:contents;
+		text-align:center;
+	}
+}
+
+/*
+********************************************
+Alternative Ollie Slideshow Section
+********************************************
+*/
+
+/* Set the margin of alternative Ollie heading */
+.alterollie {
+  margin-bottom: 50px;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.alterslidecontainer {
+  position: relative;
+	overflow: hidden;
+}
+
+/* Hide the images by default */
+.alterslides.fade{
+	margin-right: 40%;
+	display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+/* .alterprev, .alternext {
+  cursor: pointer;
+  position:absolute;
+  top: 40%; 
+	width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+} */
+
+/* Position the "next button" to the right */
+/* .alternext {
+  right: 40%;
+  border-radius: 3px 0 0 3px;
+} */
+
+/* On hover, add a black background color with a little bit see-through */
+/* .alterprev:hover, .aalternext:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}   */
+
+
+/* Set the margin, display, etc, of thumbnail image container */
+.row{
+	margin-right: 40%;
+	margin-bottom: 10px;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Three columns side by side */
+.column {
+  float: left;
+  width: 33.333333333%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+ /* Remove the hover from the selected image */
+.active, .demo:hover {
+  opacity: 1;
+}
+
+/* 
+Media query for caption text on screen less than 600px, 
+let the browser put the cpation text below the slide picture
+*/
+@media screen and (max-width: 600px) {
+	.alterprev{
+		left: 0;
+  }
+}
+
+/*
+********************************************
+Alternative Ollie Information Section
+********************************************
+*/
+
+/* Set margin, font size, and display of Ollie's info container */
+.alteranimalinfo {
+	margin-left: -30%;
+	margin-right: 10%;
+	position: absolute;
+  font-size: 20px;
+	text-align: center;
+	overflow: auto;
+}
+
+/* Set the width, margin, border, background color for the table of Ollie's basic info table */
+.alteranimalinfo #alterbasics {
+	width: 100%;
+	height: 80px;
+  border-collapse: collapse;
+  background-color: #fbf9f9;
+}
+
+/* Set the border, text alignment, and padding of table cell */
+.alteranimalinfo td {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Set the babckground color of the even row of the table */
+.alteranimalinfo tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* Set the width, margin, and text alignment of Ollie's detail info */
+.alterdetails {
+	width: 100%;
+	margin-bottom: 5%;
+  text-align:justify;
+}
+
+/* Set the margin, font size, padding, and border of the apply to adopt button */
+.alterapplybutton button{
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 20px 40px;
+  border-radius: 10px; 
+}
+
+/* Put a hover on the top of apply to adopt button when move the cursor on it */
+.alterapplybutton button:hover {
+  background-color: rgb(109, 109, 109);
+  color: white;
+}
+
+/* Align the slideshow and animal info horizontally */
+.alterslidecontainer, .alteranimalinfo {
+	display: inline-table;
+	vertical-align: top;
+}
+
+/* Set the layout of Ollie info specifically for Firefox */
+@-moz-document url-prefix() {
+	/* Set margin, font size, and display of Ollie's info container */
+	.alteranimalinfo {
+		margin-left: 50%;
+		margin-right: 10%;
+		position: absolute;
+		font-size: 20px;
+		text-align: center;
+	}
+	/* Align the slideshow and animal info horizontally */
+	.alterslidecontainer, .alteranimalinfo {
+		top: 37.5%;
+	}
+}
+
+/* 
+Media query for caption text on screen less than 600px, 
+Adjust the position of next button, margin of slide image and info table,
+Let the browser move the animal info below the slide picture
+*/
+@media screen and (max-width: 1300px) {
+	.alternext {
+		right: 0;
+	}
+	.alteranimalinfo #alterbasics {
+		margin-top: 20px;
+	}
+	.alterslides.fade, .row, .alteranimalinfo {
+		margin-right: 0;
+		display: contents;
+		text-align: center;
+		overflow: auto;
+	}
+}
+
+/*
+********************************************
+Signup Input Section
+********************************************
+*/
+
+/* Set the width, padding, and border of text input for user signup */
+.signup input{
+  width: 60%;
+  padding: 10px 10px;
+  font-size: 20px;  
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+/* Set the margin of signup container */
+.signup {
+  margin-left: 28%;
+}
+
+/* Set the border and padding of sunmit button */
+#submit {
+  border: solid;
+  padding: 20px 40px;
+  border-radius: 10px; 
+}
+
+/* Put a hover on the top of submit button when move the cursor on it */
+#submit:hover {
+  background-color: rgb(109, 109, 109);
+  color: white;
+}
